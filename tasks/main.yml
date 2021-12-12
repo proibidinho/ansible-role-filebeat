@@ -16,9 +16,9 @@
 
 - name: Ensure Filebeat is enabled and started at boot
   service:
-    name: filebeat
+    name: auditbeat
     enabled: yes
-    state: started
-  when: filebeat_start_at_boot
+    state: stopped
+  when: auditbeat_start_at_boot
 
 # vi:ts=2:sw=2:et:ft=yaml
